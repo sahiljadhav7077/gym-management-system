@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Member</title>
+
+<link rel="stylesheet" href="auth.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="form-box">
+
+<h1>Edit Member</h1>
+
+<form action="/update" method="post">
+
+<input type="hidden"
+name="id"
+th:value="${member.id}">
+
+<input type="text"
+name="name"
+th:value="${member.name}"
+required>
+
+<input type="email"
+name="email"
+th:value="${member.email}"
+required>
+
+<input type="text"
+name="phone"
+th:value="${member.phone}"
+required>
+
+<select name="gender">
+
+<option
+th:selected="${member.gender=='Male'}">
+Male
+</option>
+
+<option
+th:selected="${member.gender=='Female'}">
+Female
+</option>
+
+<option
+th:selected="${member.gender=='Other'}">
+Other
+</option>
+
+</select>
+
+<input type="number"
+name="age"
+th:value="${member.age}">
+
+<select name="membership">
+
+<option
+th:selected="${member.membership=='Basic'}">
+Basic
+</option>
+
+<option
+th:selected="${member.membership=='Premium'}">
+Premium
+</option>
+
+<option
+th:selected="${member.membership=='Elite'}">
+Elite
+</option>
+
+</select>
+
+<input type="password"
+name="password"
+th:value="${member.password}">
+
+<button type="submit">
+
+Update Member
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

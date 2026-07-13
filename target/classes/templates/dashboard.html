@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>FITZONE</h2>
+
+    <a href="#">🏠 Dashboard</a>
+    <a href="/members">👤 Members</a>
+    <a href="#">💪 Membership</a>
+    <a href="#">📅 Attendance</a>
+    <a href="#">📞 Contact</a>
+    <a href="#">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Dashboard</h1>
+
+        <h3>Welcome, Sahil 👋</h3>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Membership</h2>
+            <p>Premium</p>
+        </div>
+
+        <div class="card">
+            <h2>Attendance</h2>
+            <p>95%</p>
+        </div>
+
+        <div class="card">
+            <h2>Trainer</h2>
+            <p>John Carter</p>
+        </div>
+
+        <div class="card">
+            <h2>Status</h2>
+            <p>Active</p>
+        </div>
+
+        <div class="cards">
+
+<div class="card">
+<h3>Total Members</h3>
+<h1 th:text="${totalMembers}"></h1>
+</div>
+
+<div class="card">
+<h3>Basic Members</h3>
+<h1 th:text="${basicMembers}"></h1>
+</div>
+
+<div class="card">
+<h3>Premium Members</h3>
+<h1 th:text="${premiumMembers}"></h1>
+</div>
+
+<div class="card">
+<h3>Elite Members</h3>
+<h1 th:text="${eliteMembers}"></h1>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="profile">
+
+        <h2>Member Profile</h2>
+
+        <p><strong>Name :</strong> Sahil Jadhav</p>
+
+        <p><strong>Email :</strong> sahil@gmail.com</p>
+
+        <p><strong>Phone :</strong> 9876543210</p>
+
+        <p><strong>Age :</strong> 21</p>
+
+        <p><strong>Membership :</strong> Premium</p>
+
+    </div>
+
+    <a href="/logout" class="logout-btn">Logout</a>
+
+</div>
+
+</body>
+</html>
